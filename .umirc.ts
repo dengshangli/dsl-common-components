@@ -9,7 +9,7 @@ export default defineConfig({
   mode: 'site',
   exportStatic: { htmlSuffix: true },
   history: { type: 'hash' },
-  base: '/',
-  publicPath: '/',
+  base: '/docs-dist/',
+  publicPath: '/docs-dist/',
   // more config: https://d.umijs.org/config
 });
