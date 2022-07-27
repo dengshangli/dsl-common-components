@@ -16,10 +16,6 @@ nav:
 
 - 不支持展示预览图片名称
 
-### 效果展示
-
-![image.png](https://s2.loli.net/2022/07/20/4WxVqJGbthURvrz.png)
-
 ### Demo:
 
 ```tsx
@@ -27,23 +23,17 @@ import React from 'react';
 import { ImgPreview } from 'dsl-components';
 
 const imgs = [
-  {
-    name: 'picture1.png',
-    url: 'https://i.loli.net/2021/04/02/7TzOGPFlxAy3nre.pnghttps://i.loli.net/2021/04/02/7TzOGPFlxAy3nre.png',
-  },
-  {
-    name: 'picture2.png',
-    url: 'https://i.loli.net/2021/04/02/7TzOGPFlxAy3nre.pnghttps://i.loli.net/2021/04/02/7TzOGPFlxAy3nre.png',
-  },
+  { name: 'picture1.jpg', url: 'https://s2.loli.net/2022/07/27/aVZ2PTi79bmuSCO.jpg' },
+  { name: 'picture2.jpg', url: 'https://s2.loli.net/2022/07/27/XP6AHuC13jfbNZF.jpg' },
 ];
 
 const App = () => {
   return (
-    <div>
+    <div style={{ color: '#4569d4', cursor: 'pointer' }}>
       {imgs.map((img) => (
-        <DslImgPreview imgs={imgs} currentImg={img}>
+        <ImgPreview imgs={imgs} currentImg={img}>
           <span>{img.name}</span>
-        </DslImgPreview>
+        </ImgPreview>
       ))}
     </div>
   );
