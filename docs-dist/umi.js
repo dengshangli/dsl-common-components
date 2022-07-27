@@ -49,7 +49,7 @@
     (n.o = function (e, t) {
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
-    (n.p = '/'),
+    (n.p = '/dsl-components/'),
     n((n.s = 0));
 })({
   '++zV': function (e, t, n) {
@@ -1665,6 +1665,76 @@
           );
       }
       f && u(RegExp.prototype[h], 'sham', !0);
+    };
+  },
+  '15v9': function (e, t, n) {
+    'use strict';
+    n.r(t);
+    var r = n('q1tI'),
+      o = n.n(r),
+      i = n('dEAq'),
+      a = n('Zxc8'),
+      u = o.a.memo((e) => {
+        var t = e.demos,
+          n = t['ImgPreview-demo'].component;
+        return o.a.createElement(
+          o.a.Fragment,
+          null,
+          o.a.createElement(
+            o.a.Fragment,
+            null,
+            o.a.createElement(
+              'div',
+              { className: 'markdown' },
+              o.a.createElement(
+                'h2',
+                { id: 'foo' },
+                o.a.createElement(
+                  i['AnchorLink'],
+                  { to: '#foo', 'aria-hidden': 'true', tabIndex: -1 },
+                  o.a.createElement('span', { className: 'icon icon-link' }),
+                ),
+                'Foo',
+              ),
+              o.a.createElement('p', null, 'Demo:'),
+            ),
+            o.a.createElement(
+              a['default'],
+              t['ImgPreview-demo'].previewerProps,
+              o.a.createElement(n, null),
+            ),
+            o.a.createElement(
+              'div',
+              { className: 'markdown' },
+              o.a.createElement(
+                'p',
+                null,
+                'More skills for writing demo: ',
+                o.a.createElement(
+                  i['Link'],
+                  { to: 'https://d.umijs.org/guide/basic#write-component-demo' },
+                  'https://d.umijs.org/guide/basic#write-component-demo',
+                ),
+              ),
+            ),
+          ),
+        );
+      });
+    t['default'] = (e) => {
+      var t = o.a.useContext(i['context']),
+        n = t.demos;
+      return (
+        o.a.useEffect(() => {
+          var t;
+          null !== e &&
+            void 0 !== e &&
+            null !== (t = e.location) &&
+            void 0 !== t &&
+            t.hash &&
+            i['AnchorLink'].scrollToAnchor(decodeURIComponent(e.location.hash.slice(1)));
+        }, []),
+        o.a.createElement(u, { demos: n })
+      );
     };
   },
   '16Al': function (e, t, n) {
@@ -6771,12 +6841,12 @@
         return i;
       });
     var r = n('YS25'),
-      o = { basename: '/' };
+      o = { basename: '/dsl-components/' };
     window.routerBase && (o.basename = window.routerBase);
-    var i = Object({ NODE_ENV: 'production' }).__IS_SERVER ? null : Object(r['a'])(o),
+    var i = Object({ NODE_ENV: 'production' }).__IS_SERVER ? null : Object(r['b'])(o),
       a = function () {
         var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return e || (i = Object(r['a'])(o)), i;
+        return e || (i = Object(r['b'])(o)), i;
       };
   },
   'G+Rx': function (e, t, n) {
@@ -19021,76 +19091,6 @@
       return r;
     });
   },
-  MWsa: function (e, t, n) {
-    'use strict';
-    n.r(t);
-    var r = n('q1tI'),
-      o = n.n(r),
-      i = n('dEAq'),
-      a = n('Zxc8'),
-      u = o.a.memo((e) => {
-        var t = e.demos,
-          n = t['Foo-demo'].component;
-        return o.a.createElement(
-          o.a.Fragment,
-          null,
-          o.a.createElement(
-            o.a.Fragment,
-            null,
-            o.a.createElement(
-              'div',
-              { className: 'markdown' },
-              o.a.createElement(
-                'h2',
-                { id: 'foo' },
-                o.a.createElement(
-                  i['AnchorLink'],
-                  { to: '#foo', 'aria-hidden': 'true', tabIndex: -1 },
-                  o.a.createElement('span', { className: 'icon icon-link' }),
-                ),
-                'Foo',
-              ),
-              o.a.createElement('p', null, 'Demo:'),
-            ),
-            o.a.createElement(
-              a['default'],
-              t['Foo-demo'].previewerProps,
-              o.a.createElement(n, null),
-            ),
-            o.a.createElement(
-              'div',
-              { className: 'markdown' },
-              o.a.createElement(
-                'p',
-                null,
-                'More skills for writing demo: ',
-                o.a.createElement(
-                  i['Link'],
-                  { to: 'https://d.umijs.org/guide/basic#write-component-demo' },
-                  'https://d.umijs.org/guide/basic#write-component-demo',
-                ),
-              ),
-            ),
-          ),
-        );
-      });
-    t['default'] = (e) => {
-      var t = o.a.useContext(i['context']),
-        n = t.demos;
-      return (
-        o.a.useEffect(() => {
-          var t;
-          null !== e &&
-            void 0 !== e &&
-            null !== (t = e.location) &&
-            void 0 !== t &&
-            t.hash &&
-            i['AnchorLink'].scrollToAnchor(decodeURIComponent(e.location.hash.slice(1)));
-        }, []),
-        o.a.createElement(u, { demos: n })
-      );
-    };
-  },
   MgzW: function (e, t, n) {
     'use strict';
     var r = Object.getOwnPropertySymbols,
@@ -28986,7 +28986,7 @@
       i = n.n(o),
       a = n('q3YX'),
       u = {
-        'Foo-demo': {
+        'ImgPreview-demo': {
           component: function () {
             var e = n('K+nK')['default'],
               t = e(n('q1tI')),
@@ -29003,8 +29003,8 @@
               },
             },
             dependencies: { react: { version: '18.2.0' }, 'dsl-components': { version: '1.0.0' } },
-            componentName: 'Foo',
-            identifier: 'Foo-demo',
+            componentName: 'ImgPreview',
+            identifier: 'ImgPreview-demo',
           },
         },
       },
@@ -33912,7 +33912,7 @@
   },
   q3YX: function (e) {
     e.exports = JSON.parse(
-      '{"menus":{"en-US":{"/components":[{"title":"Components","path":"/components/foo","meta":{},"children":[{"path":"/components/foo","title":"Foo","meta":{}}]}],"*":[{"path":"/","title":"Hello dsl-components!","meta":{}}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{"en-US":[{"title":"Components","path":"/components"}]},"title":"dsl-components","logo":"https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png","mode":"site","repository":{"url":"","branch":"master"},"theme":{}}',
+      '{"menus":{"en-US":{"/components":[{"title":"\u7ec4\u4ef6","path":"/components/img-preview","meta":{},"children":[{"path":"/components/img-preview","title":"Foo","meta":{}}]}],"*":[{"path":"/","title":"Hello dsl-components!","meta":{}}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{"en-US":[{"title":"\u7ec4\u4ef6","path":"/components"}]},"title":"dsl-components","logo":"https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png","mode":"site","repository":{"url":"","branch":"master"},"theme":{}}',
     );
   },
   qHiR: function (e, t, n) {},
@@ -36498,18 +36498,18 @@
           wrappers: [n('afA6').default, n('0Bia').default],
           routes: [
             {
-              path: '/components/foo',
-              component: n('MWsa').default,
+              path: '/components/img-preview',
+              component: n('15v9').default,
               exact: !0,
               meta: {
-                filePath: 'src/Foo/index.md',
-                updatedTime: 1658826975614,
-                componentName: 'Foo',
-                nav: { title: 'Components', path: '/components' },
+                filePath: 'src/ImgPreview/index.md',
+                updatedTime: 1658891071e3,
+                componentName: 'ImgPreview',
+                nav: { title: '\u7ec4\u4ef6', path: '/components' },
                 slugs: [{ depth: 2, value: 'Foo', heading: 'foo' }],
                 title: 'Foo',
                 hasPreviewer: !0,
-                group: { path: '/components/foo', title: 'Components' },
+                group: { path: '/components/img-preview', title: '\u7ec4\u4ef6' },
               },
               title: 'Foo - dsl-components',
             },
@@ -36519,7 +36519,7 @@
               exact: !0,
               meta: {
                 filePath: 'docs/index.md',
-                updatedTime: 1658826973731,
+                updatedTime: 1658827571e3,
                 hero: {
                   title: 'dsl-components',
                   desc: '<div class="markdown"><p>dsl-components site example</p></div>',
@@ -36551,7 +36551,7 @@
               },
               title: 'Hello dsl-components! - dsl-components',
             },
-            { path: '/components', meta: {}, exact: !0, redirect: '/components/foo' },
+            { path: '/components', meta: {}, exact: !0, redirect: '/components/img-preview' },
           ],
           title: 'dsl-components',
           component: (e) => e.children,
