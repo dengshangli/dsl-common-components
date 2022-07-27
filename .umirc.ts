@@ -8,7 +8,7 @@ export default defineConfig({
   outputPath: 'docs-dist',
   mode: 'site',
   history: { type: 'hash' },
-  base: '/docs-dist/',
-  publicPath: '/docs-dist/',
+  base: '/<REPO>/',
+  publicPath: '/<REPO>/',
   // more config: https://d.umijs.org/config
 });
