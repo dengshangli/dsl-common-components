@@ -9,7 +9,7 @@ export default defineConfig({
   outputPath: 'docs-dist',
   mode: 'site',
   history: { type: 'hash' },
-  base: `/${repo}/`,
-  publicPath: `/${repo}/`,
+  base: '/dsl-components/',
+  publicPath: '/dsl-components/',
   // more config: https://d.umijs.org/config
 });
