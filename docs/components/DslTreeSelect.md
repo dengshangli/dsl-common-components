@@ -1,10 +1,4 @@
----
-nav:
-  title: 组件
-  path: /components
----
-
-## ImgPreview 图片预览
+## 树选择框
 
 ### 简介
 
