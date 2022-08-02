@@ -1,0 +1,23 @@
+.autoScroll {
+  :global {
+    .ant-table-body {
+      scrollbar-width: none;
+    }
+    ::-webkit-scrollbar {
+      width: 0 !important;
+      height: 0 !important;
+    }
+  }
+}
+
+.autoScrollMouseOver {
+  :global {
+    .ant-table-body {
+      scrollbar-width: 18px;
+    }
+    ::-webkit-scrollbar {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
