@@ -2,7 +2,7 @@ import { Table } from 'antd';
 import React, { memo, useEffect, useRef, useState } from 'react';
 import styles from './index.less';
 
-const AutoScroll = (props: any) => {
+const ScrollTable = (props: any) => {
   //   /**表格数据 */
   //   dataSource: MonitoringData[];
   //   /** 表格每次滚动间隔时间，单位ms */
@@ -13,7 +13,14 @@ const AutoScroll = (props: any) => {
   //   rollTop: number;
   //   /** 是否滚动 */
   //   flag: boolean;
-  const { dataSource, rollTime = 50, rollNum = 5, rollTop = 1.5, flag = true } = props;
+  const {
+    dataSource,
+    rollTime = 50,
+    rollNum = 5,
+    rollTop = 1.5,
+    flag = true,
+    rowKey = 'id',
+  } = props;
   const [isMouseOver, setIsMouseOver] = useState<boolean>(false);
   const tableRef = useRef<any>();
   const intervalRef = useRef<any>([]);
@@ -59,11 +66,11 @@ const AutoScroll = (props: any) => {
         initialScroll(dataSource);
       }}
       ref={tableRef}
-      className={isMouseOver ? styles.autoScrollMouseOver : styles.autoScroll}
+      className={isMouseOver ? styles.scrollTableMouseOver : styles.scrollTable}
     >
       <Table
         loading={false}
-        rowKey="id"
+        rowKey={rowKey}
         pagination={false}
         toolBarRender={false}
         search={false}
@@ -79,6 +86,6 @@ const AutoScroll = (props: any) => {
   );
 };
 
-export default memo(AutoScroll, (prevProps, nextProps) => {
+export default memo(ScrollTable, (prevProps, nextProps) => {
   return JSON.stringify(prevProps.dataSource) === JSON.stringify(nextProps.dataSource);
 });
