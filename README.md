@@ -1,33 +1,27 @@
-# dsl-components
+## dsl-components(公用组件、hooks、utils 库)
 
-## Getting Started
-
-Install dependencies,
+#### 安装
 
 ```bash
-$ npm i
+$ yarn
 ```
 
-Start the dev server,
+#### 运行
 
 ```bash
-$ npm start
+$ yarn start
 ```
 
-Build documentation,
+#### 构建及部署
+
+将代码推送至 github 仓库会自动构建及部署，进度在仓库 Action 处查看
+
+#### 预览地址
+
+https://dengshangli.github.io/dsl-components/#/
+
+#### 发布 npm 库
 
 ```bash
-$ npm run docs:build
-```
-
-Run test,
-
-```bash
-$ npm test
-```
-
-Build library via `father`,
-
-```bash
-$ npm run build
+$ npm publish
 ```
